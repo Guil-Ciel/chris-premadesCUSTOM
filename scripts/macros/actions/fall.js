@@ -18,7 +18,7 @@ export async function fall({speaker, actor, token, character, item, args, scope,
     let selection = await warpgate.menu({
         'inputs': [
             {
-                'label': 'Distance (ft):',
+                'label': 'Distance (m):', // Changed from ft to m
                 'type': 'number'
             },
             {
@@ -56,7 +56,7 @@ export async function fall({speaker, actor, token, character, item, args, scope,
         'render': render
     });
     if (!selection.buttons) return;
-    let diceNum = Math.min((Math.floor(selection.inputs[0] / 10) * 10), 200) / 10;
+    let diceNum = Math.min((Math.floor(selection.inputs[0] / 3.048) * 10), 200) / 10; // Adjusted for meters
     if (diceNum === 0) return;
     let damageFormula = diceNum + 'd6[bludgeoning]';
     async function ground(actor) {
