@@ -7,7 +7,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
     let targetActor = targetToken.actor;
     if (workflow.actor.uuid === targetActor.uuid) return;
     if ((chris.getSize(targetActor)) > (chris.getSize(actor) + 1)) {
-        ui.notifications.info('Target is too big to shove!');
+        ui.notifications.info('Alvo é muito grande para empurrar!');
         return;
     }
     let effect = chris.findEffect(targetActor, 'Incapacitated');
@@ -20,7 +20,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
             if (targetRoll.total >= sourceRoll.total) return;
         }
     }
-    let selection = await chris.dialog('What do you want to do?', [['Move', 'move'], ['Knock Prone', 'prone']]);
+    let selection = await chris.dialog('O que você quer fazer?', [['Mover', 'move'], ['Derrubar', 'prone']]);
     if (!selection) return;
     if (selection === 'prone') {
         await chris.addCondition(targetActor, 'Prone', false, null);
@@ -36,7 +36,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
             knockBackFactor = distance / canvas.dimensions.distance;
             ray = new Ray(workflow.token.center, targetToken.center);
             if (ray.distance === 0) {
-                ui.notifications.info('Target is unable to be moved!');
+                ui.notifications.info('Alvo não pode se mover!');
                 queue.remove(workflow.item.uuid);
                 return;
             }
@@ -45,7 +45,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
             if (hitsWall) {
                 distance -= 1.5;
                 if (distance === 0) {
-                    ui.notifications.info('Target is unable to be moved!');
+                    ui.notifications.info('Alvo não pode se mover!');
                     return;
                 }
             }
