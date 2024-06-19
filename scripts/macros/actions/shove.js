@@ -43,7 +43,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
             newCenter = ray.project(1 + ((canvas.dimensions.size * knockBackFactor) / ray.distance));
             hitsWall = targetToken.checkCollision(newCenter, {'origin': ray.A, 'type': 'move', 'mode': 'any'});
             if (hitsWall) {
-                distance -= 5;
+                distance -= 1.5;
                 if (distance === 0) {
                     ui.notifications.info('Target is unable to be moved!');
                     return;
