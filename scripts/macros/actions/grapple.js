@@ -5,10 +5,10 @@ export async function grapple({speaker, actor, token, character, item, args, sco
     let targetToken = workflow.targets.first();
     let targetActor = targetToken.actor;
     if (chris.getSize(targetActor) > (chris.getSize(workflow.actor) + 1)) {
-        ui.notifications.info('Target is too big to grapple!');
+        ui.notifications.info('Alvo é muito grande para agarrar!');
         return;
     }
-    let selection = await chris.remoteDialog(workflow.item.name, [[translate.skills('acr'), 'acr'], [translate.skills('ath'), 'ath'], ['Uncontested', false]], chris.firstOwner(targetToken).id, 'How would you like to contest the grapple?');
+    let selection = await chris.remoteDialog(workflow.item.name, [[translate.skills('acr'), 'acr'], [translate.skills('ath'), 'ath'], ['Uncontested', false]], chris.firstOwner(targetToken).id, 'Como quer contestar o agarrão?');
     if (selection) {
         let selfGM = chris.firstOwner(workflow.actor).isGM;
         let targetGM = chris.firstOwner(targetActor).isGM;
