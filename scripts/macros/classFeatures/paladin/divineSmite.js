@@ -3,10 +3,11 @@ import {queue} from '../../../utility/queue.js';
 export async function divineSmite({speaker, actor, token, character, item, args, scope, workflow}) {
     if (workflow.hitTargets.size != 1) return;
     if (workflow.item.name === 'Unarmed Strike' && !game.settings.get('chris-premades', 'Unarmed Strike Smite')) return;
-    let validTypes = ['martialM', 'simpleM'];
+    let validTypes = ['martialM', 'simpleM',];
     if (game.settings.get('chris-premades', 'Ranged Smite')) {
         validTypes.push('martialR');
         validTypes.push('simpleR');
+        validTypes.push('firearmCR');
     }
     if (!validTypes.includes(workflow.item.system.type.value)) return;
     let feature = chris.getItem(workflow.actor, 'Divine Smite');
