@@ -26,7 +26,7 @@ export async function shove({speaker, actor, token, character, item, args, scope
         await chris.addCondition(targetActor, 'Prone', false, null);
         return;
     } else {
-        let distance = 5;
+        let distance = 1.5;
         let knockBackFactor;
         let ray;
         let newCenter;
