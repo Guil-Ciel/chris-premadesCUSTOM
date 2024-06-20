@@ -9,7 +9,7 @@ export async function blessingOfTheForge({speaker, actor, token, character, item
         if (item.type === 'weapon' || item.system.armor) generatedMenu.push([item.name, item.id]);
     });
     if (generatedMenu.length === 0) return;
-    let selection = await chris.dialog('What item do you imbue?', generatedMenu);
+    let selection = await chris.dialog('Qual item você encanta?', generatedMenu);
     if (!selection) return;
     async function effectMacro() {
         warpgate.revert(token.document, 'Blessing of the Forge');
