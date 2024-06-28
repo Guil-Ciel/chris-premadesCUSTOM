@@ -22,7 +22,7 @@ export async function crimsonRite({speaker, actor, token, character, item, args,
     if (!selection) selection = await chris.dialog('Qual Arma?', generatedMenu);
     if (!selection) return;
     let riteMenu = [];
-    if (targetActor.items.getName('Rito Carmesim: Rito das Chams')) riteMenu.push(['Rite of the Flame', 'fire']);
+    if (targetActor.items.getName('Rito Carmesim: Rito das Chamas')) riteMenu.push(['Rite of the Flame', 'fire']);
     if (targetActor.items.getName('Rito Carmesim: Rito do Congelamento')) riteMenu.push(['Rite of the Frozen', 'cold']);
     if (targetActor.items.getName('Rito Carmesim: Rito da Tempestade')) riteMenu.push(['Rite of the Storm', 'lightning']);
     if (targetActor.items.getName('Rito Carmesim: Rito dos Mortos')) riteMenu.push(['Rite of the Dead', 'necrotic']);
