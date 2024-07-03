@@ -222,7 +222,7 @@ async function pushingAttack({speaker, actor, token, character, item, args, scop
         await chris.removeEffect(effect);
         let pushWorkflow = await MidiQOL.completeItemUse(feature, config, options);
         if (pushWorkflow.failedSaves.size != 1) return;
-        let selection = await chris.dialog('O quão longer quer empurrar o alvo?', [['1.5m.', 1.5], ['3m.', 3], ['4.5.', 4.5]]);
+        let selection = await chris.dialog('O quão longer quer empurrar o alvo?', [['1.5m', 1.5], ['3m', 3], ['4.5m', 4.5]]);
         if (!selection) return;
         let knockBackFactor;
         let ray;
