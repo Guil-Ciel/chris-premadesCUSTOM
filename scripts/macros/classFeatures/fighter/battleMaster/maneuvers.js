@@ -222,7 +222,7 @@ async function pushingAttack({speaker, actor, token, character, item, args, scop
         await chris.removeEffect(effect);
         let pushWorkflow = await MidiQOL.completeItemUse(feature, config, options);
         if (pushWorkflow.failedSaves.size != 1) return;
-        let selection = await chris.dialog('O quão longer quer empurrar o alvo?', [['5 ft.', 1.5], ['10 ft.', 3], ['15 ft.', 4.5]]);
+        let selection = await chris.dialog('O quão longer quer empurrar o alvo?', [['1.5m.', 1.5], ['3m.', 3], ['4.5.', 4.5]]);
         if (!selection) return;
         let knockBackFactor;
         let ray;
@@ -232,7 +232,7 @@ async function pushingAttack({speaker, actor, token, character, item, args, scop
             knockBackFactor = selection / canvas.dimensions.distance;
             ray = new Ray(workflow.token.center, targetToken.center);
             if (ray.distance === 0) {
-                ui.notifications.info('Target is unable to be moved!');
+                ui.notifications.info('O alvo não pode ser movido!');
                 return;
             }
             newCenter = ray.project(1 + ((canvas.dimensions.size * knockBackFactor) / ray.distance));
@@ -240,7 +240,7 @@ async function pushingAttack({speaker, actor, token, character, item, args, scop
             if (hitsWall) {
                 selection -= 5;
                 if (selection === 0) {
-                    ui.notifications.info('Target is unable to be moved!');
+                    ui.notifications.info('alvo não pode ser movido!');
                     return;
                 }
             }
