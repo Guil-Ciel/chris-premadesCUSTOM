@@ -42,9 +42,11 @@ export async function eladrinSeason({speaker, actor, token, character, item, arg
                 'onDelete': {
                     'script': chrisPremades.helpers.functionToString(effectMacro)
                 }
-            }
+            },
+            // Add or modify a flag here to control the visibility of the effect on the token.
+            'displayIcon': false // This line is an example and may need to be adjusted based on the system/API.
         }
-    }
+    };
     let hideIcon = chris.getConfiguration(workflow.item, 'showicon') ?? false;
     if (hideIcon) effectData.icon = '';
     let updates = {
