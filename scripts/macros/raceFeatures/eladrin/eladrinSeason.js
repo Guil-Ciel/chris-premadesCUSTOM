@@ -43,8 +43,9 @@ export async function eladrinSeason({speaker, actor, token, character, item, arg
                     'script': chrisPremades.helpers.functionToString(effectMacro)
                 }
             },
-            // Add or modify a flag here to control the visibility of the effect on the token.
-            'displayIcon': false // This line is an example and may need to be adjusted based on the system/API.
+            'core': {
+                'statusId': null // Hide the effect from the token
+            }
         }
     };
     let hideIcon = chris.getConfiguration(workflow.item, 'showicon') ?? false;
