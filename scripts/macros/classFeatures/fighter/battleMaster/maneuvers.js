@@ -157,7 +157,7 @@ async function lungingAttack({speaker, actor, token, character, item, args, scop
     if (!selection) selection = await chris.dialog('What weapon?', generatedMenu);
     if (!selection) return;
     let weaponData = duplicate(workflow.actor.items.get(selection).toObject());
-    weaponData.system.range.value += 5;
+    weaponData.system.range.value += 1.5;
     let weapon = new CONFIG.Item.documentClass(weaponData, {'parent': workflow.actor});
     let options = {
         'targetUuids': [workflow.targets.first().document.uuid],
@@ -222,7 +222,7 @@ async function pushingAttack({speaker, actor, token, character, item, args, scop
         await chris.removeEffect(effect);
         let pushWorkflow = await MidiQOL.completeItemUse(feature, config, options);
         if (pushWorkflow.failedSaves.size != 1) return;
-        let selection = await chris.dialog('How far do you push the target?', [['5 ft.', 5], ['10 ft.', 10], ['15 ft.', 15]]);
+        let selection = await chris.dialog('O quão longer quer empurrar o alvo?', [['5 ft.', 1.5], ['10 ft.', 3], ['15 ft.', 4.5]]);
         if (!selection) return;
         let knockBackFactor;
         let ray;
