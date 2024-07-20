@@ -1,3 +1,29 @@
+# 0.11.13 Release:
+## Bug Fixes:
+- Spike Growth
+- Blessing of the Forge (Thanks Elfrey)
+## Update Notes:
+- Foundry V12 is not supported at all at this time, do not update Foundry at this time.
+- Likely safe for D&D 3.2.0 and Foundry V11.
+- The V12 update is a work in progress.
+  
+# 0.11.12 Release:
+## Bug Fixes:
+- Song of Victory
+  
+# 0.11.11 Release:
+## Bug Fixes:
+- Song of Victory
+- Conjure Spells: overwrite initiative configuration (Thanks Elfrey)
+  
+# 0.11.10 Release:
+## Bug Fixes:
+- Create Eldritch Cannon
+  
+# 0.11.9 Release:
+## Bug Fixes:
+- Piercing Strike
+  
 # 0.11.8 Release:
 ## Bug Fixes:
 - Enhanced Weapon
@@ -13,11 +39,7 @@
 - Cleave
 - Oil of Sharpness
 - Elemental Weapon
-## Update Notes:
-- Foundry V12 is not supported at all at this time, do not update Foundry at this time.
-- Likely safe for D&D 3.2.0 and Foundry V11.
-- The V12 update is a work in progress.
-
+  
 # 0.11.7 Release:
 ## Bug Fixes:
 - Updated functions involving addDependents to use addDependent.

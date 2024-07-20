@@ -1961,7 +1961,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -1982,7 +1982,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -2003,7 +2003,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -2024,7 +2024,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -2045,7 +2045,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -2066,7 +2066,7 @@ export function setConfig() {
                     }
                 },
                 'checkbox': {
-                    'overwriteInitiative': {
+                    'overwriteinitiative': {
                         'label': 'Overwrite initiative setting? Default Seperate Initiative',
                         'default': false
                     }
@@ -2933,16 +2933,16 @@ export function setConfig() {
                         'default': '',
                         'file': true
                     },
-                    'name-forceBallista': {
+                    'name-forceballista': {
                         'label': 'Force Ballista Custom Name:',
                         'default': ''
                     },
-                    'token-forceBallista': {
+                    'token-forceballista': {
                         'label': 'Force Ballista Token:',
                         'default': '',
                         'file': true
                     },
-                    'avatar-forceBallista': {
+                    'avatar-forceballista': {
                         'label': 'Force Ballista Avatar:',
                         'default': '',
                         'file': true
@@ -2968,7 +2968,7 @@ export function setConfig() {
                         'default': 'future',
                         'values': summonEffectOptions
                     },
-                    'animation-forceBallista': {
+                    'animation-forceballista': {
                         'label': 'Force Ballista Animation:',
                         'default': 'future',
                         'values': summonEffectOptions
@@ -6013,8 +6013,8 @@ export function setConfig() {
                 'version': '0.9.33'
             },
             'Song of Victory': {
-                'name': 'Bladesong',
-                'version': '0.9.33'
+                'name': 'Song of Victory',
+                'version': '0.11.11'
             },
             'Mote of Potential': {
                 'name': 'Mote of Potential',
